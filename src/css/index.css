@@ -1,0 +1,119 @@
+
+.app {
+    height: 100%;
+    font-size: 1.2em;
+    padding: 0;
+}
+
+.navigation {
+    
+}
+
+.navigationList {
+    display: grid;
+    grid-template-columns: repeat(4, 45px);
+    justify-content: center;
+    justify-items: center;
+    row-gap: 1.5vh;
+    column-gap: 40px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    padding: 0;
+}
+
+.navigationItem {
+    text-decoration: none;
+    list-style: none;
+}
+
+.navigationLink {
+    position: relative;
+    text-decoration: none;
+    padding: 8px;
+}
+
+#currentLink {
+    color: rgb(255, 237, 214);
+    background-color: rgb(42, 42, 42);
+}
+
+
+
+/* Background color and text color */
+.textColor {
+    color: rgb(42, 42, 42)
+}
+
+.altTextColor {
+    color: rgb(255, 237, 214);
+}
+
+.backgroundColor {
+    background-color: rgb(255, 237, 214);
+}
+
+.altBackgroundColor {
+    background-color: rgb(42, 42, 42)
+}
+
+
+/* Global Tags */
+
+a, a:visited, a:active {
+    color:rgb(42, 42, 42)
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+}
+
+html {
+    font-family: 'Bitter', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    height: 70%;
+    width: 70%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+/* Media Queries */
+/* @media screen and (min-width: 375px) {
+    .app {
+        font-size: 1.5em;
+    }
+} */
+
+@media screen and (min-width: 400px) {
+    .navigationList {
+        grid-template-columns: repeat(4, 51.75px);
+        column-gap: 45.5px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .navigationList {
+        font-size: 1.35em;
+        column-gap: 50px;
+        grid-template-columns: repeat(4, 80px);
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .navigationList {
+        font-size: 2em;
+        column-gap: 50px;
+        grid-template-columns: repeat(4, 126px);
+    }
+}
