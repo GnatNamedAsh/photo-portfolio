@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-website",
+  "name": "portfolio",
   "version": "0.2.0",
-  "description": "Portfolio",
+  "description": "Photography portfolio",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
