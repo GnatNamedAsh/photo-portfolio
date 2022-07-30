@@ -58,7 +58,7 @@ export const renderGallery = async (root) => {
     paragraph.className = P_CLASSES
     component.appendChild(paragraph)
     await renderGalleryComponents(component)
-    console.log('not here yet')
+    console.log('rendering gallery')
     root.appendChild(component)
 }
 
