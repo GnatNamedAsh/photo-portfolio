@@ -1,5 +1,9 @@
 import LocomotiveScroll from 'locomotive-scroll'
 
+/**
+ * 
+ * @param {Node} root 
+ */
 export const renderGalleryComponents = async (root) => {
     const scrollContainer = document.createElement('main')
     scrollContainer.setAttribute('data-scroll-container', '')
@@ -14,6 +18,11 @@ export const renderGalleryComponents = async (root) => {
     root.appendChild(scrollContainer)
 }
 
+/**
+ * 
+ * @param {Number} number 
+ * @returns {Node[]}
+ */
 const createImageElements = async (number) => {
     const elements = new Array(number)
     for (let i = 0; i < number; ++i) {
