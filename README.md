@@ -1,18 +1,14 @@
 # Photo Portfolio
----
 
 ## Description
 Supposed to be a raw vanilla js implementation for a photography portfolio site. Mostly for discovery/skill refinement. No AI use outside of talking through ideas.
 
 Not updated since 2021.
 
----
-
 ## Goals
 
 Get a functional website for displaying photos, a working UX, etc. without relying on too many packages and mostly done manually.
 
----
 
 ## Utilities
 
@@ -28,13 +24,9 @@ Front-end:
 
 - webpack (for building files easily)
 
----
-
 ## How to run
 
 1. `npm install` in the directory
 2. `npm run build` in the directory
 3. `npm start` in the directory
 4. Open webpage to `http://localhost:8080/`
-
----
