@@ -1,8 +1,38 @@
+/* classes */
 
 .app {
     height: 100%;
     font-size: 1.2em;
     padding: 0;
+}
+
+.galleryContainer {
+    display: flex;
+}
+
+.galleryItemContainer {
+    display: grid
+}
+
+.galleryImageContainer {
+    margin: 0 3vw;
+    display: grid;
+    grid-template-areas: '... ...' '... gallery-image' '... ...';
+    grid-template-columns: 8rem 21vmax;
+    grid-template-rows: 8rem 28vmax 3rem;
+}
+
+.galleryImage {
+    grid-area: gallery-image;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    transform-origin: 50% 100%;
+}
+
+.galleryImageLandscape {
+
 }
 
 .navigation {
@@ -36,6 +66,8 @@
     padding: 8px;
 }
 
+/* identifiers */
+
 #currentLink {
     color: rgb(255, 237, 214);
     background-color: rgb(42, 42, 42);
@@ -44,6 +76,7 @@
 
 
 /* Background color and text color */
+
 .textColor {
     color: rgb(42, 42, 42)
 }

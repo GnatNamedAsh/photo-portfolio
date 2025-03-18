@@ -2,6 +2,11 @@ import { renderGalleryComponents } from "./gallery"
 
 const P_CLASSES = 'altBackgroundColor altTextColor'
 
+/**
+ * 
+ * @param {Node} root 
+ * @param {string} component 
+ */
 const deleteComponent = (root, component) => {
     const ele = root.getElementsByClassName(component)[0]
     if (ele) {
@@ -9,6 +14,21 @@ const deleteComponent = (root, component) => {
     }
 }
 
+/**
+ * Deletes all content from the root node
+ * @param {Node} root 
+ */
+export const clearContent = (root) => {
+
+    while (root.firstChild) {
+        root.removeChild(root.firstChild)
+    }
+}
+
+/**
+ * 
+ * @param {Node} root 
+ */
 const render404 = (root) => {
     document.title = 'not found'
     const component = document.createElement('div')
@@ -22,6 +42,10 @@ const render404 = (root) => {
     root.appendChild(component)
 }
 
+/**
+ * 
+ * @param {Node} root 
+ */
 export const renderAbout = async (root) => {
     document.title = 'about'
     const component = document.createElement('div')
@@ -35,6 +59,10 @@ export const renderAbout = async (root) => {
     root.appendChild(component)
 }
 
+/**
+ * 
+ * @param {Node} root 
+ */
 export const renderContact = async (root) => {
     document.title = 'contact'
     const component = document.createElement('div')
@@ -48,6 +76,10 @@ export const renderContact = async (root) => {
     root.appendChild(component)
 }
 
+/**
+ * 
+ * @param {Node} root 
+ */
 export const renderGallery = async (root) => {
     document.title = 'gallery'
     const component = document.createElement('div')
@@ -58,10 +90,14 @@ export const renderGallery = async (root) => {
     paragraph.className = P_CLASSES
     component.appendChild(paragraph)
     await renderGalleryComponents(component)
-    console.log('not here yet')
+    console.log('rendering gallery')
     root.appendChild(component)
 }
 
+/**
+ * 
+ * @param {Node} root 
+ */
 export const renderHome = (root) => {
     const component = document.createElement('div')
     component.className = 'home'
@@ -81,6 +117,11 @@ const options = {
     contact: renderContact
 }
 
+/**
+ * 
+ * @param {string | string[]} newComponent 
+ * @param {string} oldComponent 
+ */
 export const render = async (newComponent, oldComponent) => {
     let componentItems = []
     if (typeof newComponent === 'object') {
@@ -98,13 +139,13 @@ export const render = async (newComponent, oldComponent) => {
             deleteComponent(contentElement, 'notFound')
             history.pushState({}, 'home', '/')
             document.title = 'home'
-            const currentLink = document.getElementById('currentLnk')
+            const currentLink = document.getElementById('currentLink')
             if (currentLink && currentLink.textContent !== 'home') {
                 currentLink.removeAttribute('id')
-                const menuItems = [...document.getElementsByClassName('navigationLink')]
-                const homeMenuItem = menuItems.find(item => item.textContent === 'home')
-                homeMenuItem.id = 'currentLink'
             }
+            const menuItems = [...document.getElementsByClassName('navigationLink')]
+            const homeMenuItem = menuItems.find(item => item.textContent === 'home')
+            homeMenuItem.id = 'currentLink'
             renderHome(contentElement)
         }, 10000)
     }

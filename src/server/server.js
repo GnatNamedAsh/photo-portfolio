@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const gethtml = require("./backend/getFile");
 
 const app = express();
 DIST_DIR = __dirname;
