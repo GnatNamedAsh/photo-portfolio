@@ -1,26 +1,22 @@
-# Banno Scraper
+# Photo Portfolio
 ---
 
 ## Description
-Web scraper for the banno.com website. Its functionalities were given by the coding challenge description given by them.
+Supposed to be a raw vanilla js implementation for a photography portfolio site. Mostly for discovery/skill refinement. No AI use outside of talking through ideas.
+
+Not updated since 2021.
 
 ---
 
 ## Goals
 
-This program should be able to do the following:
-
-- Count the number of products offered on the banno website
-- Give the top 3 occuring alphanumeric characters contained in the HTML file, and how many times each occurs.
-- Count the number of .png images in the HTML
-- Find BannoJHA's Twitter handle (This should work if the Twitter name were to change)
-- Count the number of times the term "financial institution" occurs in text.
+Get a functional website for displaying photos, a working UX, etc. without relying on too many packages and mostly done manually.
 
 ---
 
 ## Utilities
 
-For this project, I am required to use JavaScript. Therefore, the following packages have been used:
+For this project, I am using Javascript. I'm not going to go too crazy, and things have changed since I started working on this, but to keep it minimal, I'll only be using what is necessary.
 
 Back-end:
 
